@@ -10,6 +10,7 @@ public class TaxCalculatorService
         if (operation.OperationType == OperationType.Buy)
         {
             weightedAverage = ((weightedAverage * totalShares) + (operation.UnitCost * operation.Quantity)) / (totalShares + operation.Quantity);
+            weightedAverage = Math.Round(weightedAverage, 2);
             totalShares += operation.Quantity;
             return new TaxResult(0m);
         }
