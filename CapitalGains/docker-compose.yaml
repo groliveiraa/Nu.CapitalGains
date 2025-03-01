@@ -1,0 +1,6 @@
+﻿services:
+  capitalgains.cli:
+    image: capitalgains.cli
+    build:
+      context: .
+      dockerfile: Dockerfile
